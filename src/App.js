@@ -1,17 +1,18 @@
-import React from "react";
-import { ToastContainer } from "react-toastify";
-import AuthContextProvider from "./context/AuthContext";
 import AppRouter from "./app-router/AppRouter";
+import { AuthProvider } from "./contexts/AuthContext";
+import { BlogProvider } from "./contexts/BlogContext";
+import { ToastContainer } from "react-toastify";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <AuthContextProvider>
+    <AuthProvider>
+      <BlogProvider>
         <AppRouter />
         <ToastContainer />
-      </AuthContextProvider>
-    </div>
+      </BlogProvider>
+    </AuthProvider>
   );
-};
+}
 
 export default App;
+

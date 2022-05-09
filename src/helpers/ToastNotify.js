@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 
 export const toastWarnNotify = (msg) => {
   toast.warn(msg, {
-    autoClose: 5000,
+    autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -32,3 +32,4 @@ export const toastErrorNotify = (msg) => {
     progress: undefined,
   });
 };
+
