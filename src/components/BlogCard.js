@@ -10,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useNavigate } from "react-router-dom";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import placeholder from "../assets/placeholder.png";
+import placeholder from "../Assets/placeholder.png";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import moment from "moment";
 import { useAuth } from "../contexts/AuthContext";
