@@ -10,7 +10,7 @@ import {
 import Navbar from "../components/Navbar.js";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Main from "../pages/Dashboard";
+import Dashboard from "../pages/Dashboard";
 import Profile from "../pages/Profile";
 import About from "../pages/About";
 import NewBlog from "../pages/NewBlog.js";
@@ -44,7 +44,7 @@ function AppRouter() {
           path="/login"
           element={<Login setIsAuth={setIsAuth} isAuth={isAuth} />}
         />
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route element={<PrivateRouter />}>
