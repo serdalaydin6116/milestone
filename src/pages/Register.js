@@ -7,14 +7,14 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import blokPng from "../assets/blok.png";
+import blokPng from "../Assets/blok.png";
 import { useNavigate } from "react-router-dom";
 import { toastSuccessNotify, toastErrorNotify } from "../helpers/ToastNotify";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useAuth } from "../contexts/AuthContext";
-import loadingGif from "../assets/loading.gif";
-import googlePng from "../assets/google.png";
+import loadingGif from "../Assets/loading.gif";
+import googlePng from "../Assets/google.png";
 
 const validationSchema = yup.object({
   email: yup
