@@ -8,16 +8,16 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import placeholder from "../assets/placeholder.png";
+import placeholder from "../Assets/placeholder.png";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import moment from "moment";
 import { useBlog } from "../contexts/BlogContext";
 import { useAuth } from "../contexts/AuthContext";
 import Button from "@material-ui/core/Button";
-import loadingGif from "../assets/loading.gif";
+import loadingGif from "../Assets/loading.gif";
 import { useNavigate, useParams } from "react-router-dom";
 import { toastSuccessNotify } from "../helpers/ToastNotify";
-import noData from "../assets/no-data.png";
+import noData from "../Assets/no-data.png";
 
 const useStyles = makeStyles({
   root: {
