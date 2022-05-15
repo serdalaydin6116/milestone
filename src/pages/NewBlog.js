@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 import BlogForm from "../components/BlogForm";
 import { useNavigate } from "react-router-dom";
 import { useBlog } from "../contexts/BlogContext";
-import { toastSuccessNotify } from "../helpers/ToastNotify";
+import { toastSuccessNotify } from "../utils/ToastNotify";
 
 const NewBlog = () => {
   const { currentUser } = useAuth();

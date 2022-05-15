@@ -9,7 +9,7 @@ import Container from "@material-ui/core/Container";
 import placeholderPng from "../Assets/placeholder.png";
 import { useBlog } from "../contexts/BlogContext";
 import { useAuth } from "../contexts/AuthContext";
-import { toastSuccessNotify } from "../helpers/ToastNotify";
+import { toastSuccessNotify } from "../utils/ToastNotify";
 import { useNavigate, useParams } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
