@@ -10,13 +10,13 @@ import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useNavigate } from "react-router-dom";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import placeholder from "../Assets/placeholder.png";
+import placeholder from "../assets/placeholder.png";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import moment from "moment";
-import { useAuth } from "../contexts/AuthContext";
-import { toastErrorNotify } from "../helpers/ToastNotify";
+import { toastErrorNotify } from "../utils/ToastNotify";
+import { useSelector } from "react-redux";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(() => ({
   root: {
     minWidth: 345,
     maxWidth: 345,
@@ -45,9 +45,9 @@ const useStyles = makeStyles({
     fontFamily: "Girassol",
     color: "#046582",
   },
-});
+}));
 
-export default function MediaCard({ post }) {
+const BlogCard = ({ item }) => {
   const {
     id,
     author,
@@ -57,15 +57,18 @@ export default function MediaCard({ post }) {
     image,
     published_date,
     title,
-  } = post;
+  } = item;
+
   const classes = useStyles();
   const navigate = useNavigate();
-  const { currentUser } = useAuth();
+
+  const { currentUser } = useSelector((state) => state.auth);
 
   const openDetails = () => {
     if (!currentUser) {
-      toastErrorNotify("Login for detials of blog!");
+      toastErrorNotify("Please Login to get the details");
     }
+    //? if user doenst exist it is routed to the login page via PrivateRouter
     navigate(`/detail/${id}`);
   };
 
@@ -77,6 +80,7 @@ export default function MediaCard({ post }) {
           image={image || placeholder}
           title={title}
         />
+
         <CardContent className={classes.cardContent}>
           <Typography
             gutterBottom
@@ -114,4 +118,6 @@ export default function MediaCard({ post }) {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default BlogCard;
